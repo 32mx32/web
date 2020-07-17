@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mymac</title>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
+<link rel="stylesheet" type="text/css" href="/css/price.css"/>
+
+<!-- Start Google Analytics -->
+<!--<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-100094943-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+</head>
+<body>
+<div class="template">
+    
+  <div class="col-md-12 col-md-pull-6">
+    <div class="col-md-3">
+        <div class="priceName">IPHONE 6 Plus</div>
+        <div class="priceDescript"><!--Все указанные цены включают стоимость работы и запчастей.--></div>
+        <div class="mini-menu">
+            <ul>
+                <!--<li>
+                    <a href="#">Главная</a>
+                </li>-->
+                <li class="sub">
+                    <a href="#">ОСНОВНЫЕ ВИДЫ РЕМОНТА</a>
+                    <ul>
+                        <li><a data-toggle="tab" href="#DIAG">ДИАГНОСТИКА
+                            <div class="price-cell">0</div></a></li>
+            
+                        <li><a data-toggle="tab" href="#BATTERY">ЗАМЕНА БАТАРЕИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/ciyn3/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-batt").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-batt", ></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#DISPCOPY">ЗАМЕНА ДИСПЛЕЯ COPY<!--COPY-->
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cre1l/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code gsx$_cztg3 */
+                                                $("#cost-dispcopy").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-dispcopy"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#DISPORIG">ЗАМЕНА ДИСПЛЕЯ ORIG<!--ORIG-->
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cpzh4/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code gsx$_dmair */
+                                                $("#cost-disporig").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-disporig"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#DISPGLASS">ЗАМЕНА СТЕКЛА ДИСПЛЕЯ <!--ORIG-->
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/chk2m/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code gsx$_dmair */
+                                                $("#cost-dispglass").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-dispglass"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#CASE">ЗАМЕНА КОРПУСА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/clrrx/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code gsx$_cztg3 */
+                                                $("#cost-case").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-case"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#CAMGLASS">ЗАМЕНА СТЕКЛА КАМЕРЫ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - includes ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d180g/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code gsx$_cztg3 */
+                                                $("#cost-camglass").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-camglass"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#CLEAN">ЧИСТКА СЕТОК ДИНАМИКОВ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service /dcgjs/ - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dcgjs/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t; /* Device Model Code gsx$_cztg3 */
+                                                $("#cost-clean").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-clean"></div> <!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="sub">
+                    <a href="#">ПРОГРАММНЫЙ РЕМОНТ</a>
+                    <ul>
+                        
+                        <li><a data-toggle="tab" href="#SOFT">ВОССТАНОВЛЕНИЕ ПО
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d415a/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-soft").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-soft"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#SOFTUPDATE">ОБНОВЛЕНИЕ ПРОШИВКИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/ddv49/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-softupdate").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-softupdate"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#RESETPASS">СБРОС ПАРОЛЯ ОГРАНИЧЕНИЙ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets */
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d5fpr/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-resetpass").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-resetpass"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#RESTBACKUP">ИЗВЛЕЧЕНИЕ ДАННЫХ ИЗ КОПИИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets */
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d6ua4/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-restbackup").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-restbackup"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li class="sub">
+                    <a href="#">ЗАМЕНА ВНУТРЕННИХ КОМПОНЕНТОВ</a>
+                    <ul>
+
+                        <li><a data-toggle="tab" href="#MIC">ЗАМЕНА МИКРОФОНА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dkvya/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-mic").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-mic"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+                
+                        <li><a data-toggle="tab" href="#VIBRO">ЗАМЕНА ВИБРОМОТОРА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dmair/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-vibro").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-vibro"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#HRING">ЗАМЕНА ВЕРХНЕГО ДИНАМИКА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d2mkx/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-hring").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-hring"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#LOWRING">ЗАМЕНА НИЖНЕГО ДИНАМИКА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cssly/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-lowring").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-lowring"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                       <li><a data-toggle="tab" href="#CAM">ЗАМЕНА ОСНОВНОЙ КАМЕРЫ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cyevm/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-cam").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-cam"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#FCAM">ЗАМЕНА ФРОНТАЛЬНОЙ КАМЕРЫ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /*13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cztg3/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-fcam").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-fcam"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+ 
+                    </ul>
+                </li>
+
+                <li class="sub">
+                    <a href="#">РЕМОНТ КНОПОК И ЗАМЕНА ШЛЕЙФОВ</a>
+                    <ul>
+                        
+                        <li><a data-toggle="tab" href="#HOME">ЗАМЕНА КНОПКИ HOME
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cu76f/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-home").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-home"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#PWRBTN">ЗАМЕНА КНОПКИ ВКЛЮЧЕНИЯ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cvlqs/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-pwrbtn").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-pwrbtn"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#LIGTH">ЗАМЕНА ШЛЕЙФА С ДАТЧИКОМ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/d88ul/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-ligth").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-ligth"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+                
+                        <li><a data-toggle="tab" href="#CHARG">ЗАМЕНА ШЛЕЙФА РАЗЪЕМА ЗАРЯДКИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/cx0b9/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-charg").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-charg"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li class="sub">
+                    <a href="#">РЕМОНТ МАТЕРИНСКОЙ ПЛАТЫ</a>
+                    <ul>
+                        
+                        <li><a data-toggle="tab" href="#WATER">РЕМОНТ ПОСЛЕ ВЛАГИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/di2tg/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-water").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-water">от </div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#AUDIO">ЗАМЕНА АУДИО КОДЕКА
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dgo93/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-audio").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-audio"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#WIFI">ЗАМЕНА МИКРОСХЕМЫ WIFI
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dnp34/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-wifi").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-wifi"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#LED">ЗАМЕНА ДРАЙВЕРА ПОДСВЕТКИ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/df9om/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-led").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-led"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#POWER">ЗАМЕНА КОНТРОЛЛЕРА ПИТАНИЯ
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/djhdx/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-power").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-power"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        <li><a data-toggle="tab" href="#TRISTAR">ЗАМЕНА МИКРОСХЕМЫ U2 TRISTAR
+                            <div class="price-cell">
+                                <!--start find price for specific service in Google Sheets-->
+                                <script>
+                                    $.ajax({
+                                        /*link for specific service - ID for specific service*/
+                                        /* ID Google Sheets*/
+                                        url: 'https://spreadsheets.google.com/feeds/list/13v9qXFrFQWf0bHZMp736AYOXackprNC1A6QxTrqMUfQ/7/public/values/dp3nl/values?alt=json',
+                                        dataType: 'json',
+                                        type: 'get',
+                                        cache: false,
+                                        success: function(data) {
+                                            $(data.entry).each(function(index, value) {
+                                                /*console.log(value.gsx$_ev8pv.$t);*/
+                                                var content = value.gsx$_ev8pv.$t;  /* Device Model Code */
+                                                $("#cost-tristar").append(content);
+                                            });
+                                        }
+                                    })
+                                </script>
+                                <div id="cost-tristar"></div><!--value output-->
+                                <!--end find price for specific service in Google Sheets-->
+                            </div></a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+                <!--<li>
+                    <a href="#">Контакты</a>
+                </li>-->
+            </ul>
+        </div>
+
+    
+    </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="tab-content">
+
+            <!-- ОСНОВНЫЕ ВИДЫ РЕМОНТА -->
+                <div id="DIAG" class="tab-pane fade in active"><!--ДИАГНОСТИКА-->
+                    <!--<h3>Замена дисплея</h3>-->
+                    <!--<p>Диагностика проводится на профессиональном оборудовании квалифицированными инженерами - срок от 15 минут до 5 рабочих дней.</p>-->
+                    <p class="diag-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="BATTERY" class="tab-pane fade"><!--ЗАМЕНА БАТАРЕИ-->
+                    <!--<h3>ЗАМЕНА БАТАРЕИ</h3>-->
+                    <!--<h3>Замена аккумулятора</h3>-->
+                    <!--<p>Если телефон быстро разряжается, перезагружается или самопроизвольно выключается при наличии заряда. Батарея вздута. Требуется замена батареи.</p>-->
+                    <p class="batt-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="DISPCOPY" class="tab-pane fade"><!--ЗАМЕНА ДИСПЛЕЯ COPY-->
+                    <!--<h3>JAVASCRIPT</h3>-->
+                    <p class="dispcopy-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="DISPORIG" class="tab-pane fade"><!--ЗАМЕНА ДИСПЛЕЯ COPY-->
+                    <!--<h3>JAVASCRIPT</h3>-->
+                    <p class="disporig-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="DISPGLASS" class="tab-pane fade"><!--ЗАМЕНА ДИСПЛЕЯ COPY-->
+                    <!--<h3>JAVASCRIPT</h3>-->
+                    <p class="dispglass-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="COVER" class="tab-pane fade"><!--ЗАМЕНА ЗАДНЕЙ КРЫШКИ-->
+                    <p class="cover-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="CASE" class="tab-pane fade"><!--ЗАМЕНА СРЕДНЕЙ ЧАСТИ-->
+                    <p class="case-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="CLEAN" class="tab-pane fade"><!--ЧИСТКА СЕТОК ДИНАМИКОВ-->
+                    <p class="clean-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+            
+            <!-- ПРОГРАММНЫЙ РЕМОНТ -->
+                <div id="SOFT" class="tab-pane fade"><!--ВОССТАНОВЛЕНИЕ ПО-->
+                    <p class="soft-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="SOFTUPDATE" class="tab-pane fade"><!--ОБНОВЛЕНИЕ ПРОШИВКИ-->
+                    <p class="softupdate-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="RESETPASS" class="tab-pane fade"><!--СБРОС ПАРОЛЯ ОГРАНИЧЕНИЙ-->
+                    <p class="resetpass-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="RESTBACKUP" class="tab-pane fade"><!--ИЗВЛЕЧЕНИЕ ДАННЫХ ИЗ КОПИИ-->
+                    <p class="restbackup-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+
+            <!-- ЗАМЕНА ВНУТРЕННИХ КОМПОНЕНТОВ -->
+                <div id="CAM" class="tab-pane fade"><!--ЗАМЕНА ОСНОВНОЙ КАМЕРЫ-->
+                    <p class="cam-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="FCAM" class="tab-pane fade"><!--ЗАМЕНА ФРОНТАЛЬНОЙ КАМЕРЫ-->
+                    <p class="fcam-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="HRING" class="tab-pane fade"><!--ЗАМЕНА ВЕРХНЕГО ДИНАМИКА-->
+                    <p class="hring-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="LOWRING" class="tab-pane fade"><!--ЗАМЕНА НИЖНЕГО ДИНАМИКА-->
+                    <p class="lowring-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="MIC" class="tab-pane fade"><!--ЗАМЕНА МИКРОФОНА-->
+                    <p class="mic-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="VIBRO" class="tab-pane fade"><!--ЗАМЕНА ВИБРОМОТОРА-->
+                    <p class="vibro-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+
+            <!-- РЕМОНТ КНОПОК И ЗАМНЕА ШЛЕЙФОВ -->
+                <div id="HOME" class="tab-pane fade"><!--ЗАМЕНА КНОПКИ HOME-->
+                    <p class="home-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="LIGTH" class="tab-pane fade"><!--ЗАМЕНА ШЛЕЙФА С ДАТЧИКОМ-->
+                    <p class="ligth-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="PWRBTN" class="tab-pane fade"><!--ЗАМЕНА КНОПКИ ВКЛЮЧЕНИЯ-->
+                    <p class="pwrbtn-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="CHARG" class="tab-pane fade"><!--ЗАМЕНА РАЗЪЕМА ЗАРЯДКИ-->
+                    <p class="charg-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+
+            <!-- РЕМОНТ МАТЕРИНМКОЙ ПЛАТЫ -->
+                <div id="AUDIO" class="tab-pane fade"><!--ЗАМЕНА АУДИО КОДЕКА-->
+                    <p class="audio-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="LED" class="tab-pane fade"><!--ЗАМЕНА ДРАЙВЕРА ПОДСВЕТКИ-->
+                    <p class="led-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="POWER" class="tab-pane fade"><!--ЗАМЕНА КОНТРОЛЛЕРА ПИТАНИЯ-->
+                    <p class="power-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="WIFI" class="tab-pane fade"><!--ЗАМЕНА МИКРОСХЕМЫ WIFI-->
+                    <p class="wifi-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="TRISTAR" class="tab-pane fade"><!--ЗАМЕНА МИКРОСХЕМЫ U2 TRISTAR-->
+                    <p class="tristar-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+                <div id="WATER" class="tab-pane fade"><!--РЕМОНТ ПОСЛЕ ВЛАГИ-->
+                    <p class="water-descr"></p>
+                    <iframe src="/effects/text-amination.html" allowfullscreen></iframe>
+                </div>
+
+
+
+        </div>
+    </div>
+  </div>  
+</div>
+<div class="clearfix"></div>
+
+
+<!-- Script menu accordion -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.sub > a').click(function(){
+          $('.sub ul').slideUp();
+           if ($(this).next().is(":visible")){
+               $(this).next().slideUp();
+           } else {
+           $(this).next().slideToggle();
+           }
+          return false;
+        });
+           $('.mini-menu > ul > li > a').click(function(){
+           $('.mini-menu > ul > li > a, .sub a').removeClass('active');
+           $(this).addClass('active');
+        }),
+           $('.sub ul li a').click(function(){
+           $('.sub ul li a').removeClass('active');
+           $(this).addClass('active');
+        });
+    });
+</script>
+<!-- End Script menu accordion -->
+
+
+</body>
+</html>

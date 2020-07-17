@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>draw worm</title>
+<!--<script type="text/javascript" src="/js/code-line.js"></script>-->
+<link rel="stylesheet" type="text/css" href="/css/code-line.css"/>
+
+</head>
+  <body>
+      
+    <div class="line-code">
+        <div class="line-code__top"></div>
+        <div class="line-code__bott"></div>
+      </div>
+
+      <script>
+          //Populate coded line with symbols
+var codedLines = $('.line-code__top, .line-code__bott');
+codedLines.each(function() {
+  var el = $(this);
+  var count = 100;
+  var line = $();
+  var text;
+  var i = 0;
+
+  setTimeout(function() {
+    for (i = 0; i < count; i++) {
+      text = '<div class="letter-col"></div>';
+      text = $(text)
+        .css('animation-duration', randomRange(2, 4) + 's')
+        .append(
+          '<span>' + Math.random().toString(2).substr(2, 1) + '</span>' +
+          '<span>' + Math.random().toString(2).substr(2, 1) + '</span>' +
+          '<span>' + Math.random().toString(2).substr(2, 1) + '</span>' +
+          '<span>' + Math.random().toString(2).substr(2, 1) + '</span>'
+        );
+      line = line.add(text);
+    }
+    el.append(line);
+  }, 100);
+});
+
+function randomRange(min, max) {
+  return (min + ((max - min) * Math.random())).toFixed(4);
+};
+      </script>
+
+  </body>
+</html>

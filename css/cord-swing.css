@@ -1,0 +1,84 @@
+body {
+    background: #f8f8f8;
+}
+#cord {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+#cord > div {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 380px;
+}
+#main_cord {
+    z-index: 20;
+    position: absolute;
+    background: url('cord.svg') 0 0 no-repeat scroll;
+    -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation: swing 3s infinite ease-in-out;
+    -webkit-transform-origin: top;
+}
+@-moz-keyframes swing {
+    0% {
+        -moz-transform: rotate(-0.75deg);
+   }
+    50% {
+        -moz-transform: rotate(0.75deg);
+   }
+    100% {
+        -moz-transform: rotate(-0.75deg);
+   }
+}
+@-webkit-keyframes swing {
+    0% {
+        -webkit-transform: rotate(-0.75deg);
+   }
+    50% {
+        -webkit-transform: rotate(0.75deg);
+   }
+    100% {
+        -webkit-transform: rotate(-0.75deg);
+   }
+}
+#cord_shadow {
+    z-index: 10;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    opacity: 0.04;
+    background: url('cord-shadow.svg') 0 0 no-repeat scroll;
+    -moz-animation: 3s ease 0s normal none infinite shadowSwing;
+    -moz-transform-origin: center top;
+    -webkit-animation: shadowSwing 3s infinite ease-in-out;
+    -webkit-transform-origin: top;
+}
+@-moz-keyframes shadowSwing {
+    0% {
+        -moz-transform: rotate(-1deg);
+   }
+    50% {
+        -moz-transform: rotate(1deg);
+   }
+    100% {
+        -moz-transform: rotate(-1deg);
+   }
+}
+@-webkit-keyframes shadowSwing {
+    0% {
+        -webkit-transform: rotate(-1deg);
+   }
+    50% {
+        -webkit-transform: rotate(1deg);
+   }
+    100% {
+        -webkit-transform: rotate(-1deg);
+   }
+}

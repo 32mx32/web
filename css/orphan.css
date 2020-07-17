@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Orphan;
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/orphan_2.woff') format('woff');
+    font-weight: normal;
+    font-weight: 100;
+    font-style: normal;
+}
+@keyframes scroller {
+    80% { text-indent: 5%; }
+    100% { text-indent: 5%; }
+} 
+
+@keyframes fader {
+  to { opacity: 0; }
+}
+* { box-sizing: border-box; } 
+html { 
+  font-family: Orphan, Futura Light, Futura, sans-serif;
+  font-size: 4.8vw;
+  /* so that the text scales to browser window */
+  min-height: 100%;
+}
+body { 
+  margin: 0; height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; 
+  /* basic centering of content with flexbox */
+}
+h1 { 
+  width: 95%;
+  overflow: hidden;
+  text-transform: uppercase;
+  /* just in case someone forgets to turn on CAPS */
+}
+h1 span { 
+  display: inline-block;
+  width: 50%;
+  overflow: hidden;
+  line-height: 2;
+  animation: scroller 4s 1.5s 2 forwards, fader 1s 5s; 
+/* initiates the "scroller" animation twice, each time for four seconds, with a 1 second pause beforehand. The "fader" animation takes place just once, over 1 second, with a five second pause beforehand */
+} 
+h1 span:first-child { 
+  text-indent: 100%; 
+  /* disappers text in the first (overflow: hidden) span by pushing it all the way to the right. Curiously, Webkit works with a value of 50%, but Firefox needs 100%; */
+  border-right: .5vw solid #000; 
+}
+h1 span:last-child { 
+  text-indent: -100%;  
+  /* the opposite indent value for text in the right <span> element */
+  border-left: .5vw solid #000;
+}
+h1 span.closer:first-child { 
+  width: 20%; 
+/* shifted due to character length in the second part of the animation: this could also be automated by JavaScript counting the number of chars in each span and dividing the space appropriately */
+}
+h1 span.closer:last-child { width: 80%;  }

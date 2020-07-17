@@ -1,0 +1,39 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>draw worm</title>
+  <!--<script type="text/javascript" src="/js/scrolling-prefixes.js"></script>-->
+  <link rel="stylesheet" type="text/css" href="/css/scrolling-prefixes.css"/>
+  
+  </head>
+    <body>
+        
+        <span id="main">
+            <span id="scroll">
+              <span class="item">sh</span>
+              <span class="item">gr</span>
+              <span class="item">f</span>
+              <span class="item">m</span>
+              <span class="item">0x0</span>
+              <span class="item">bl</span>
+              <span class="item">arc</span>
+            </span>
+            ade
+          </span>
+
+          <script>
+            //alternatively for a non-JS approach: Set the animation and offset for each child manually.
+
+            delay = 0.1;
+            duration = $("#scroll .item").length * delay;
+
+            $("#scroll .item").each(function(n) {
+            $(this).css("transform", "translateY(-"+(n*100)+"%)");
+            $(this).css("animation", "scrollanim "+duration+"s linear -"+(delay*n)+"s infinite");
+            });
+        </script>
+  
+    </body>
+  </html>
+  
